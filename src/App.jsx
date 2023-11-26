@@ -3,12 +3,17 @@ import "./App.css";
 import store from "./redux/store";
 import AppleContainer from "./components/AppleContainer";
 import BananaContainer from "./components/BananaContainer";
+import OrangeContainer from "./components/OrangeContainer";
+import UserContainer from "./components/UserContainer";
 
 function App() {
   return (
     <Provider store={store}>
       <AppleContainer />
       <BananaContainer />
+      <OrangeContainer />
+      <hr />
+      <UserContainer />
     </Provider>
   );
 }

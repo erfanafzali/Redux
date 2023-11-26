@@ -1,10 +1,12 @@
 // 1. add createStore(itemReducer)
-// 2. export default store 
+// 2. export default store
 // 3. create rootReducer in redux folder
+// 4. add applyMiddlewere(thunk)
 
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import rootReducer from "./rootReducer";
+import thunk from "redux-thunk";
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
-export default store
+export default store;
