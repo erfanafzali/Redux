@@ -2,11 +2,13 @@ import { Provider } from "react-redux";
 import "./App.css";
 import store from "./redux/store";
 import AppleContainer from "./components/AppleContainer";
+import BananaContainer from "./components/BananaContainer";
 
 function App() {
   return (
     <Provider store={store}>
-      <AppleContainer /> 
+      <AppleContainer />
+      <BananaContainer />
     </Provider>
   );
 }

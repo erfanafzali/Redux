@@ -1,13 +1,15 @@
 // 1. create ui page
 // 2. call useSelector for use reducer state
 // 3. call dispatch to use type dispath , payload
+// 4. add root state to state => state.item
 
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { buyApple } from "../redux/apple/appleActions";
 
 function AppleContainer() {
   const [value, setValue] = useState();
-  const state = useSelector((state) => state);
+  const state = useSelector((state) => state.apple);
   const dispatch = useDispatch();
 
   return (
@@ -20,12 +22,8 @@ function AppleContainer() {
         name="value"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={() => dispatch({ type: "BUY_APPLE", payload: 1 })}>
-        Buy One Apple
-      </button>
-      <button onClick={() => dispatch({ type: "BUY_APPLE", payload: value })}>
-        Buy Apple
-      </button>
+      <button onClick={() => dispatch(buyApple(value))}>Buy Apple</button>
+      <button onClick={() => dispatch(buyApple())}>Buy One Apple</button>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 // 1. add createStore(itemReducer)
 // 2. export default store 
-
+// 3. create rootReducer in redux folder
 
 import { createStore } from "redux";
-import appleReducer from "./apple/appleReducer";
+import rootReducer from "./rootReducer";
 
-const store = createStore(appleReducer)
+const store = createStore(rootReducer)
 
 export default store
