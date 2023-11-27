@@ -18,7 +18,7 @@ function UserContainer() {
   return (
     <div>
       <h2>User List</h2>
-      {loading ? (
+      {loading ? ( 
         <p>Loading ...</p>
       ) : error ? (
         <p>{error}</p>
